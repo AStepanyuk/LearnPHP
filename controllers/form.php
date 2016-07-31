@@ -2,4 +2,8 @@
 
 $vertical = requestVar ('vertical', 0);
 
-include "../views/formView.php";
+$loader = new Twig_Loader_Filesystem('../views');
+$twig = new Twig_Environment($loader);
+
+
+echo $twig->render('form.html.twig', ['vertical' => $vertical]);

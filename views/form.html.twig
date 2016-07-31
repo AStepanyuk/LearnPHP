@@ -12,22 +12,20 @@
         Name
         <input type="text" name="name">
     </label>
-    <?php if ($vertical) { ?> <br/> <?php } ?>
+    {% if vertical %} <br/> {% endif %}
     <label>
         Last name
         <input type="text" name="last_name">
     </label>
-    <?php if ($vertical) { ?> <br/> <?php } ?>
+    {% if vertical %} <br/> {% endif %}
     <button type="submit">OK</button>
 
 </form>
 
-
-<?php if ($vertical) { ?>
+{% if vertical %}
     <a href="/">Horizontalno</a>
-<?php } else {?>
+{% else %}
     <a href="/?vertical=1">Verticalno</a>
-<?php } ?>
-
+{% endif %}
 </body>
 </html>

@@ -2,6 +2,7 @@
 
 error_reporting(E_ALL);
 
+require_once "vendor/autoload.php";
 require "../function/request_functin.php";
 
 function loadClassFile($name)
